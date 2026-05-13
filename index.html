@@ -1,0 +1,216 @@
+export default function PlaceOumSaad() {
+  return (
+    <div className="min-h-screen bg-[#07130f] text-white font-sans">
+      {/* HERO */}
+      <section
+        className="relative h-screen flex items-center justify-center text-center overflow-hidden"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1600&auto=format&fit=crop')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/80"></div>
+
+        <div className="relative z-10 max-w-4xl px-6">
+          <div className="inline-block mb-6 px-5 py-2 rounded-full border border-yellow-400/40 bg-yellow-400/10 text-yellow-300 text-sm tracking-widest uppercase">
+            Place Oum Saad • Laayoune
+          </div>
+
+          <h1 className="text-5xl md:text-7xl font-black leading-tight mb-6 text-yellow-300">
+            ساحة أم السعد
+          </h1>
+
+          <p className="text-lg md:text-2xl text-gray-200 leading-relaxed mb-10 max-w-2xl mx-auto">
+            فضاء عمومي حديث بمدينة العيون يجمع بين الجمال الحضري، المساحات الخضراء، والأجواء العائلية الراقية.
+          </p>
+
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+            <a
+              href="https://www.google.com/maps"
+              target="_blank"
+              className="px-8 py-4 rounded-2xl bg-yellow-400 text-black font-bold text-lg hover:scale-105 transition-all duration-300 shadow-2xl"
+            >
+              فتح الموقع على Google Maps
+            </a>
+
+            <a
+              href="https://snapchat.com/add/saharalayer"
+              target="_blank"
+              className="px-8 py-4 rounded-2xl border border-yellow-400 text-yellow-300 font-bold text-lg hover:bg-yellow-400 hover:text-black transition-all duration-300"
+            >
+              Snapchat @saharalayer
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ABOUT */}
+      <section className="py-24 px-6 md:px-20 bg-[#0b1b16]">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-14 items-center">
+          <div>
+            <div className="text-yellow-400 uppercase tracking-[0.3em] mb-4 text-sm">
+              About The Place
+            </div>
+
+            <h2 className="text-4xl md:text-5xl font-black mb-8 leading-tight">
+              معلم حضري حديث في قلب مدينة العيون
+            </h2>
+
+            <p className="text-gray-300 leading-8 text-lg mb-6">
+              تعتبر ساحة أم السعد واحدة من أبرز الفضاءات العمومية بمدينة العيون، حيث توفر أجواءً هادئة ومناسبة للعائلات والزوار.
+            </p>
+
+            <p className="text-gray-400 leading-8 text-lg">
+              تتميز الساحة بتصميم هندسي عصري، نوافير جميلة، مساحات خضراء، وممرات واسعة للتنزه والاستمتاع بالأجواء الليلية.
+            </p>
+          </div>
+
+          <div className="relative">
+            <img
+              src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?q=80&w=1200&auto=format&fit=crop"
+              alt="Place Oum Saad"
+              className="rounded-[32px] shadow-2xl border border-yellow-400/20"
+            />
+
+            <div className="absolute -bottom-6 -left-6 bg-yellow-400 text-black px-6 py-4 rounded-2xl shadow-xl font-bold text-lg">
+              Place Oum Saad
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FEATURES */}
+      <section className="py-24 px-6 md:px-20 bg-[#07130f]">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="text-yellow-400 uppercase tracking-[0.3em] mb-4 text-sm">
+              Features
+            </div>
+
+            <h2 className="text-4xl md:text-5xl font-black">
+              مميزات الساحة
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-6">
+            {[
+              {
+                title: 'فضاء عائلي',
+                desc: 'أجواء مناسبة للعائلات والزوار طوال اليوم.',
+                icon: '🌴',
+              },
+              {
+                title: 'نوافير حديثة',
+                desc: 'تصميم جمالي يضفي لمسة حضرية راقية.',
+                icon: '⛲',
+              },
+              {
+                title: 'إضاءة ليلية',
+                desc: 'إضاءة أنيقة تمنح الساحة طابعًا فاخرًا.',
+                icon: '🌙',
+              },
+              {
+                title: 'مساحات للتنزه',
+                desc: 'ممرات واسعة ومريحة للاستمتاع بالأجواء.',
+                icon: '🚶',
+              },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="bg-[#0d1f19] border border-yellow-400/10 rounded-[28px] p-8 hover:-translate-y-2 transition-all duration-300 shadow-xl"
+              >
+                <div className="text-5xl mb-6">{item.icon}</div>
+                <h3 className="text-2xl font-bold mb-4 text-yellow-300">
+                  {item.title}
+                </h3>
+                <p className="text-gray-400 leading-7">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* GALLERY */}
+      <section className="py-24 px-6 md:px-20 bg-[#0b1b16]">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="text-yellow-400 uppercase tracking-[0.3em] mb-4 text-sm">
+              Gallery
+            </div>
+
+            <h2 className="text-4xl md:text-5xl font-black">
+              صور الساحة
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              'https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop',
+              'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop',
+              'https://images.unsplash.com/photo-1470770903676-69b98201ea1c?q=80&w=1200&auto=format&fit=crop',
+            ].map((img, i) => (
+              <div key={i} className="overflow-hidden rounded-[28px] group shadow-2xl">
+                <img
+                  src={img}
+                  className="h-[320px] w-full object-cover group-hover:scale-110 transition-all duration-700"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SNAPCHAT */}
+      <section className="py-24 px-6 md:px-20 bg-yellow-400 text-black text-center">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-6xl mb-6">👻</div>
+
+          <h2 className="text-4xl md:text-5xl font-black mb-8">
+            تابعوا ساحة أم السعد على سناب شات
+          </h2>
+
+          <p className="text-xl leading-9 mb-10 font-medium">
+            صور يومية، أجواء الساحة، الفعاليات، والمشاهد الليلية مباشرة عبر Snapchat.
+          </p>
+
+          <a
+            href="https://snapchat.com/add/saharalayer"
+            target="_blank"
+            className="inline-block px-10 py-5 rounded-2xl bg-black text-yellow-300 font-black text-xl hover:scale-105 transition-all duration-300 shadow-2xl"
+          >
+            @saharalayer
+          </a>
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="bg-black py-10 px-6 text-center border-t border-yellow-400/10">
+        <h3 className="text-3xl font-black text-yellow-300 mb-4">
+          Place Oum Saad
+        </h3>
+
+        <p className="text-gray-400 mb-6">
+          Laayoune • Morocco
+        </p>
+
+        <div className="flex justify-center gap-6 text-lg mb-6">
+          <a href="https://snapchat.com/add/saharalayer" className="hover:text-yellow-300 transition-all">
+            Snapchat
+          </a>
+          <a href="#" className="hover:text-yellow-300 transition-all">
+            Instagram
+          </a>
+          <a href="#" className="hover:text-yellow-300 transition-all">
+            TikTok
+          </a>
+        </div>
+
+        <p className="text-gray-600 text-sm">
+          © 2026 Place Oum Saad — All Rights Reserved.
+        </p>
+      </footer>
+    </div>
+  )
+}
